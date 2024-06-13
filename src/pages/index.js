@@ -1,51 +1,53 @@
-import * as React from "react"
+import * as React from "react";
+
+import "../styles/global.css";
 
 const pageStyles = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
+};
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 320,
-}
+};
 const headingAccentStyles = {
   color: "#663399",
-}
+};
 const paragraphStyles = {
   marginBottom: 48,
-}
+};
 const codeStyles = {
   color: "#8A6534",
   padding: 4,
   backgroundColor: "#FFF4DB",
   fontSize: "1.25rem",
   borderRadius: 4,
-}
+};
 const listStyles = {
   marginBottom: 96,
   paddingLeft: 0,
-}
+};
 const listItemStyles = {
   fontWeight: 300,
   fontSize: 24,
   maxWidth: 560,
   marginBottom: 30,
-}
+};
 
 const linkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
-}
+};
 
 const docLinkStyle = {
   ...linkStyle,
   listStyleType: "none",
   marginBottom: 24,
-}
+};
 
 const descriptionStyle = {
   color: "#232129",
@@ -53,13 +55,13 @@ const descriptionStyle = {
   marginTop: 10,
   marginBottom: 0,
   lineHeight: 1.25,
-}
+};
 
 const docLink = {
   text: "Documentation",
   url: "https://www.gatsbyjs.com/docs/",
   color: "#8954A8",
-}
+};
 
 const badgeStyle = {
   color: "#fff",
@@ -75,7 +77,7 @@ const badgeStyle = {
   top: -2,
   marginLeft: 10,
   lineHeight: 1,
-}
+};
 
 const links = [
   {
@@ -121,56 +123,157 @@ const links = [
       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
     color: "#663399",
   },
-]
+];
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
+    <main>
+      <header className="bg-primary text-white py-4">
+        <div className="container mx-auto flex justify-between items-center px-6">
+          <h1 className="text-3xl font-bold">Kabelkennzeichnung</h1>
+          <nav className="space-x-6">
+            <a href="#produkte" className="hover:underline">
+              Produkte
+            </a>
+            <a href="#montage" className="hover:underline">
+              Montage
+            </a>
+            <a href="#preise" className="hover:underline">
+              Preise
+            </a>
+            <a href="#kontakt" className="hover:underline">
+              Kontakt
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="bg-secondary py-20">
+        <div className="container mx-auto text-center px-6">
+          <img
+            src="https://images.unsplash.com/photo-1625276254563-f0fbbf66a5e7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Kabelkennzeichnung im Einsatz"
+            className="w-full h-64 object-cover mb-8 rounded-md"
+          />
+          <h2 className="text-4xl font-bold mb-4">
+            Langlebige und zuverlässige Kabelkennzeichnung
+          </h2>
+          <p className="text-lg mb-8">
+            Perfekt für sicherheitsrelevante Bereiche wie Kraftwerkbau.
+          </p>
+        </div>
+      </section>
+
+      <section id="produkte" className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">Unsere Produkte</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="https://images.unsplash.com/photo-1599256871679-6a154745680b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Einzelstreifen"
+                className="w-full h-48 object-cover mb-4 rounded-md"
+              />
+              <h3 className="text-2xl font-semibold mb-2">Einzelstreifen</h3>
+              <p>Perfekt für individuelle Kabelkennzeichnung.</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <img
+                src="https://images.unsplash.com/photo-1664117291466-45da775ec1d4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Rollenware"
+                className="w-full h-48 object-cover mb-4 rounded-md"
+              />
+              <h3 className="text-2xl font-semibold mb-2">Rollenware</h3>
+              <p>Ideal für Großprojekte.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="montage" className="bg-secondary py-20">
+        <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Montage</h2>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold">
+                Einzelne Kabelkennzeichnungsbänder:
+              </h3>
+              <ol className="list-decimal list-inside space-y-2">
+                <li>Längsperforierung am Anfang des Bandes einreißen.</li>
+                <li>Über das Kabel legen.</li>
+                <li>
+                  Ende um das Kabel durch die Längsperforierung durchziehen.
+                </li>
+              </ol>
+            </div>
+            <div className="space-y-4 mt-8">
+              <h3 className="text-2xl font-semibold">Rollenware:</h3>
+              <ol className="list-decimal list-inside space-y-2">
+                <li>Beschriftungsstreifen an der Querperforation abreißen.</li>
+                <li>Über das Kabel legen und befestigen.</li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1508060836772-9d2944e3696d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Montage"
+              className="w-full h-auto rounded-md shadow-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="preise" className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">Preise</h2>
+          <p className="mb-4">Die Preise sind abhängig von:</p>
+          <ul className="list-disc list-inside mb-4 space-y-2">
+            <li>der bestellten Menge</li>
+            <li>dem Kabeldurchmesser</li>
+            <li>der Anzahl Zeichen pro Band</li>
+            <li>Lieferung auf Rolle oder Einzelstreifen</li>
+            <li>Verpackungsart</li>
+            <li>Lieferzeit</li>
+          </ul>
+          <p>Normale Lieferzeit: 8 bis 12 Tage.</p>
           <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+            href="#kontakt"
+            className="bg-accent text-white py-3 px-6 rounded-lg hover:bg-accent-dark transition mt-4 inline-block"
           >
-            {docLink.text}
+            Preisanfrage senden
           </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+        </div>
+      </section>
+
+      <section id="kontakt" className="bg-secondary py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl font-bold mb-6">Kontakt</h2>
+          <div id="hubspotForm" className="space-y-4 max-w-[640px]"></div>
+        </div>
+      </section>
+
+      <footer className="bg-primary text-white py-4">
+        <div className="container mx-auto text-center">
+          <p>&copy; 2024 Kabelkennzeichnung. Alle Rechte vorbehalten.</p>
+          <div className="mt-2 space-x-6">
+            <a href="#" className="hover:underline">
+              Impressum
+            </a>
+            <a href="#" className="hover:underline">
+              Datenschutz
+            </a>
+            <a href="#" className="hover:underline">
+              AGB
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Home Page</title>;
