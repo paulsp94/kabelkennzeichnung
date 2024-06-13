@@ -4,8 +4,10 @@
 module.exports = {
   pathPrefix: "/kabelkennzeichnung",
   siteMetadata: {
-    title: `Kabelkennzeichnung`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Langlebige Kabelkennzeichnung – PVC-Kabelkennzeichnungsbänder für sicherheitsrelevante Bereiche`,
+    description: `Entdecken Sie unsere langlebigen und witterungsbeständigen PVC-Kabelkennzeichnungsbänder, ideal für sicherheitsrelevante Bereiche wie Kraftwerkbau. Individuelle Beschriftungen möglich.`,
+    keywords: `Kabelkennzeichnung, PVC-Kabelkennzeichnungsbänder, witterungsbeständig, UV-beständig, Montageanleitung, Preisanfrage, sicherheitsrelevante Bereiche`,
+    siteUrl: `https://paulspen.de/kabelkennzeichnung/`,
   },
   plugins: [
     "gatsby-plugin-postcss",
