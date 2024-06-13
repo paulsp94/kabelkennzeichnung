@@ -1,5 +1,10 @@
 import * as React from "react";
 
+import HeroImage from "../images/hero.webp";
+import Rolls1 from "../images/rolls.webp";
+import Rolls2 from "../images/rolls2.webp";
+import Cable from "../images/cable.webp";
+
 import "../styles/global.css";
 
 const pageStyles = {
@@ -151,7 +156,7 @@ const IndexPage = () => {
       <section className="bg-secondary py-20">
         <div className="container mx-auto text-center px-6">
           <img
-            src="https://images.unsplash.com/photo-1625276254563-f0fbbf66a5e7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src={HeroImage}
             alt="Kabelkennzeichnung im Einsatz"
             className="w-full h-64 object-cover mb-8 rounded-md"
           />
@@ -170,7 +175,7 @@ const IndexPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
-                src="https://images.unsplash.com/photo-1599256871679-6a154745680b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={Rolls1}
                 alt="Einzelstreifen"
                 className="w-full h-48 object-cover mb-4 rounded-md"
               />
@@ -180,7 +185,7 @@ const IndexPage = () => {
 
             <div className="bg-white p-6 rounded-lg shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1664117291466-45da775ec1d4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={Rolls2}
                 alt="Rollenware"
                 className="w-full h-48 object-cover mb-4 rounded-md"
               />
@@ -217,7 +222,7 @@ const IndexPage = () => {
           </div>
           <div>
             <img
-              src="https://images.unsplash.com/photo-1508060836772-9d2944e3696d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={Cable}
               alt="Montage"
               className="w-full h-auto rounded-md shadow-lg"
             />
